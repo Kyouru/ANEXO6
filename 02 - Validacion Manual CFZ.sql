@@ -1,0 +1,4 @@
+--Verificar Visualmente si hay registros con nombre duplicados con codigo diferente
+SELECT DISTINCT c.CODIGOCIP, c.SOCIO, P.NOMBRECOMPLETO from TMP_SBS_ANEXO6_CFZ c LEFT JOIN PERSONA p ON c.CODIGOCIP = p.CIP ORDER BY c.SOCIO;
+
+UPDATE TMP_SBS_ANEXO6_CFZ SET CODIGOCIP = '0151370' where SOCIO = 'BYBCOM S.A.C.';
